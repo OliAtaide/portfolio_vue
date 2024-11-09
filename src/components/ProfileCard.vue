@@ -1,5 +1,8 @@
 <script setup>
 import SocialButtons from "@/components/SocialButtons.vue";
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -9,15 +12,15 @@ import SocialButtons from "@/components/SocialButtons.vue";
         <img :src="require('@/assets/me.jpg')" alt="" />
         <div>
           <h3 class="card-title">Filipe Ataíde</h3>
-          <h6 class="card-subtitle">{{ $t("profile.subtitle") }}</h6>
+          <h6 class="card-subtitle">{{ t("profile.subtitle") }}</h6>
         </div>
       </div>
       <div class="card-text">
-        {{ $t("profile.summary") }}
+        {{ t("profile.summary") }}
       </div>
       <SocialButtons />
       <h3 class="card-title">
-        {{ $t("profile.exp.title") }}
+        {{ t("profile.exp.title") }}
       </h3>
       <div class="exp-list">
         <div class="card exp-card">
@@ -32,7 +35,7 @@ import SocialButtons from "@/components/SocialButtons.vue";
       </div>
       <a class="btn btn-primary" href="/Filipe_Ataide_PTBR.pdf">
         <i class="bi bi-download"></i>
-        {{ $t("profile.resume.title") }}
+        {{ t("profile.resume.title") }}
       </a>
     </div>
   </div>

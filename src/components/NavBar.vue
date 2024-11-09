@@ -25,22 +25,22 @@ const currentLocale = computed(() => route.params.locale || locale.value);
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <BrazilIcon v-if="this.$i18n.locale == 'pt'" />
-                <UsaIcon v-if="this.$i18n.locale == 'en'" />
+                <BrazilIcon v-if="locale == 'pt'" />
+                <UsaIcon v-if="locale == 'en'" />
               </button>
               <ul class="dropdown-menu">
                 <li>
                   <a
                     class="dropdown-item"
                     href="/pt/"
-                    v-if="this.$i18n.locale == 'en'"
+                    v-if="locale == 'en'"
                   >
                     <BrazilIcon />
                   </a>
                   <a
                     class="dropdown-item"
                     href="/en/"
-                    v-if="this.$i18n.locale == 'pt'"
+                    v-if="locale == 'pt'"
                   >
                     <UsaIcon />
                   </a>
