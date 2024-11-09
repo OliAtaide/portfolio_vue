@@ -1,6 +1,15 @@
 <script setup>
 import BrazilIcon from "@/icons/BrazilIcon.vue";
 import UsaIcon from "@/icons/UsaIcon.vue";
+
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+
+const route = useRoute();
+const { locale } = useI18n();
+
+const currentLocale = computed(() => route.params.locale || locale.value);
 </script>
 
 <template>
@@ -41,39 +50,29 @@ import UsaIcon from "@/icons/UsaIcon.vue";
           </div>
         </div>
         <div class="col">
-          <ul class="nav" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="home-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#home-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="home-tab-pane"
-                aria-selected="true"
+          <ul class="nav" id="myTab">
+            <li class="nav-item">
+              <router-link
+                :to="{ name: 'home', params: { locale: currentLocale } }"
+                class="nav-link"
+                active-class="active"
                 title="Projetos"
               >
                 <i class="bi bi-kanban"></i>
-              </button>
+              </router-link>
             </li>
             <li class="nav-item">
               <div class="dot"></div>
             </li>
-            <li class="nav-item" role="presentation">
-              <button
+            <li class="nav-item">
+              <router-link
+                :to="{ name: 'skills', params: { locale: currentLocale } }"
                 class="nav-link"
-                id="profile-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#profile-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="profile-tab-pane"
-                aria-selected="false"
+                active-class="active"
                 title="Tecnologias"
               >
                 <i class="bi bi-tools"></i>
-              </button>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -129,7 +128,7 @@ import UsaIcon from "@/icons/UsaIcon.vue";
     align-items: center;
     justify-content: center;
 
-    &.active {
+    &.active, &:hover {
       background-color: white;
       color: var(--primary);
     }
