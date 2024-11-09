@@ -12,14 +12,13 @@ import NavBar from "./components/NavBar.vue";
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+:root {
+  --primary: #337799;
+}
+
 #app {
-  background-color: #337799;
+  background-color: var(--primary);
 
   font-family: "Inter", sans-serif;
-  /*
-  max-height: 100vh;
-  min-height: 100vh;
-  overflow: hidden;
-  */
 }
 </style>

@@ -16,11 +16,23 @@ import UsaIcon from "@/icons/UsaIcon.vue";
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <BrazilIcon />
+                <BrazilIcon v-if="this.$i18n.locale == 'pt'" />
+                <UsaIcon v-if="this.$i18n.locale == 'en'" />
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a
+                    class="dropdown-item"
+                    href="/pt/"
+                    v-if="this.$i18n.locale == 'en'"
+                  >
+                    <BrazilIcon />
+                  </a>
+                  <a
+                    class="dropdown-item"
+                    href="/en/"
+                    v-if="this.$i18n.locale == 'pt'"
+                  >
                     <UsaIcon />
                   </a>
                 </li>
@@ -74,7 +86,7 @@ import UsaIcon from "@/icons/UsaIcon.vue";
 .navbar {
   z-index: 1;
   height: 60px;
-  background-image: linear-gradient(#337799, transparent);
+  background-image: linear-gradient(var(--primary), transparent);
 }
 .dropdown {
   display: flex;
@@ -119,7 +131,7 @@ import UsaIcon from "@/icons/UsaIcon.vue";
 
     &.active {
       background-color: white;
-      color: #337799;
+      color: var(--primary);
     }
   }
 }

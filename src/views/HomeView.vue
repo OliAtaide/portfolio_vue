@@ -53,7 +53,7 @@ const skills = [
     url: "https://react.dev/",
   },
   {
-    name: "Next.js  ",
+    name: "Next.js",
     image: "nextjs.png",
     url: "https://nextjs.org/",
   },
@@ -91,15 +91,16 @@ const skills = [
                 <img :src="require('@/assets/me.jpg')" alt="" />
                 <div>
                   <h3 class="card-title">Filipe Ataíde</h3>
-                  <h6 class="card-subtitle">Desenvolvedor Frontend</h6>
+                  <h6 class="card-subtitle">{{ $t("profile.subtitle") }}</h6>
                 </div>
               </div>
               <div class="card-text">
-                Desenvolvedor Frontend formado em Análise e Desenvolvimento de
-                Sistemas e especializado em frameworks Node.js.
+                {{ $t("profile.summary") }}
               </div>
               <SocialButtons />
-              <h3 class="card-title">Experiência</h3>
+              <h3 class="card-title">
+                {{ $t("profile.exp.title") }}
+              </h3>
               <div class="exp-list">
                 <div class="card exp-card">
                   <div class="card-body">
@@ -113,7 +114,7 @@ const skills = [
               </div>
               <a class="btn btn-primary" href="/Filipe_Ataide_PTBR.pdf">
                 <i class="bi bi-download"></i>
-                Baixar Currículo
+                {{ $t("profile.resume.title") }}
               </a>
             </div>
           </div>
@@ -169,7 +170,7 @@ const skills = [
 </template>
 
 <style lang="scss">
-.main{
+.main {
   height: calc(100vh - 120px);
 }
 
@@ -201,7 +202,7 @@ const skills = [
 }
 
 .btn-primary {
-  background-color: #337799 !important;
+  background-color: var(--primary) !important;
   border-radius: 8px !important;
   font-weight: bold !important;
   display: flex !important;
@@ -252,7 +253,7 @@ const skills = [
   &::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 10px;
-    border: 3px solid #337799;
+    border: 3px solid var(--primary);
     border-top-width: 60px;
     border-bottom-width: 10px;
     height: 20%;
