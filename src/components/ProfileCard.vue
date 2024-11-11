@@ -1,8 +1,8 @@
 <script setup>
 import SocialButtons from "@/components/SocialButtons.vue";
-import { useI18n } from 'vue-i18n';
+import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
+const { t, tm, rt } = useI18n();
 </script>
 
 <template>
@@ -19,17 +19,21 @@ const { t } = useI18n();
         {{ t("profile.summary") }}
       </div>
       <SocialButtons />
-      <h3 class="card-title">
+      <h3 class="card-title m-0">
         {{ t("profile.exp.title") }}
       </h3>
       <div class="exp-list">
-        <div class="card exp-card">
+        <div
+          class="card exp-card"
+          v-for="(v, i) in tm('profile.exp.list')"
+          :key="i"
+        >
           <div class="card-body">
             <div class="exp-header d-flex">
-              <h6 class="card-title">Desenvolvedor Frontend</h6>
-              <h6 class="card-subtitle">2021-2024</h6>
+              <h6 class="card-title">{{ rt(v.title) }}</h6>
+              <h6 class="card-subtitle">{{ rt(v.date) }}</h6>
             </div>
-            <p class="card-text">LAIS/UFRN</p>
+            <p class="card-text">{{ rt(v.comp) }}</p>
           </div>
         </div>
       </div>
