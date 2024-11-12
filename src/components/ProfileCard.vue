@@ -37,7 +37,7 @@ const { t, tm, rt } = useI18n();
           </div>
         </div>
       </div>
-      <a class="btn btn-primary" href="/Filipe_Ataide_PTBR.pdf">
+      <a class="btn btn-primary" :href="'/' + t('profile.resume.file')">
         <i class="bi bi-download"></i>
         {{ t("profile.resume.title") }}
       </a>

@@ -21,6 +21,4 @@ import ProfileCard from "@/components/ProfileCard.vue";
   <FooterBar />
 </template>
 
-<style lang="scss" src="@/assets/style.scss">
-
-</style>
+<style lang="scss" src="@/assets/style.scss"></style>
