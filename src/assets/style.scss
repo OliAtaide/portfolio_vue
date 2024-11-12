@@ -4,23 +4,37 @@
     --primary: #337799;
 }
 
+/* General Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 #app {
     background-color: var(--primary);
-
     font-family: "Inter", sans-serif;
 }
 
-// NavBar
-
-.navbar,
-.footer {
-    height: 80px;
-}
-
+/* NavBar */
 .navbar {
+    height: 80px;
     z-index: 1;
     background-image: linear-gradient(var(--primary), transparent);
 }
+
+.footer {
+    height: 80px;
+    z-index: 99;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dropdown {
     display: flex;
     justify-content: center;
@@ -37,58 +51,81 @@
 
 .nav {
     justify-content: center;
-    gap: 20px;
+    gap: 1em;
+}
 
-    .nav-item {
-        display: flex;
-    }
+.nav-item,
+.nav-link {
+    display: flex;
+}
 
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: white;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+.nav-link,
+.dot,
+.profile-card img {
+    border-radius: 50%;
+}
 
-    .nav-link {
-        border: 2px solid white;
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
-        &.active,
-        &:hover {
-            background-color: white;
-            color: var(--primary);
-        }
+.nav-link {
+    border: 2px solid white !important;
+    color: white !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &:hover,
+    &.active {
+        background-color: white !important;
+        color: var(--primary) !important;
     }
 }
 
-//
-
+/* Profile Card */
 .profile-card {
-    border-radius: 16px !important;
     width: fit-content;
     margin-bottom: 1em;
+}
 
-    .card-body {
-        padding: 20px !important;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+.profile-card,
+.skill-card,
+.list-group-item {
+    border-radius: 1em !important;
+    border: none !important;
+}
+
+.skill-card,
+.list-group-item {
+    img {
+        width: auto;
+        height: 100%;
+        transition: all 0.2s ease-in-out;
     }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+.profile-card .card-body,
+.skill-card {
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .profile-card img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
 }
 
 .profile-header {
@@ -100,18 +137,23 @@
     font-weight: bold;
 }
 
-.btn-primary {
-    background-color: var(--primary) !important;
-    border-radius: 8px !important;
-    font-weight: bold !important;
+/* Buttons and Card styles */
+.btn-primary,
+.exp-card {
+    border-radius: 0.5em !important;
+}
+
+.btn-primary,
+.nav-link {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+}
 
-    i {
-        line-height: 0;
-    }
+.btn-primary {
+    background-color: var(--primary) !important;
+    font-weight: bold !important;
+    gap: 0.5em;
 }
 
 .exp-list {
@@ -121,68 +163,52 @@
 }
 
 .exp-card {
-    border-radius: 8px !important;
     border-color: black !important;
     border-width: 2px !important;
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        padding: 1em !important;
-    }
-    .exp-header {
-        justify-content: space-between;
-    }
-    .card-text,
-    .card-subtitle,
-    .card-title {
-        font-size: 1em !important;
-        margin: 0;
-    }
-    .card-subtitle {
-        opacity: 0.5;
-    }
 }
+
+.exp-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em !important;
+}
+
+.exp-header {
+    justify-content: space-between;
+}
+
+.card-text,
+.card-subtitle,
+.card-title {
+    font-size: 1em !important;
+    margin: 0;
+}
+
+.card-subtitle {
+    opacity: 0.5;
+}
+
+/* List Group */
 
 .col {
     position: relative;
 }
-
 .list-group {
     overflow-y: scroll;
-    margin-top: -80px;
-    padding-top: 80px;
     padding-right: 6px;
     padding-bottom: 1em;
-    position: absolute;
+    padding-top: 80px;
+    margin-top: -80px;
+    height: 100vh;
+    scroll-margin-top: 20px;
     border-radius: 0 !important;
-    top: 0;
-    bottom: 0;
+}
 
-    &::-webkit-scrollbar {
-        padding-top: 60px;
-        width: 12px;
-        height: 12px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: white;
-        border-radius: 10px;
-        border: 3px solid var(--primary);
-        border-top-width: 60px;
-        border-bottom-width: 10px;
-        height: 20%;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-        background-color: lightgray;
-    }
-
-    .list-group-item {
-        border-radius: 20px !important;
-        overflow: hidden;
-        min-height: fit-content !important;
-    }
+.list-group-item {
+    overflow: hidden;
+    border: none;
+    min-height: fit-content !important;
 }
 
 .skills {
@@ -192,27 +218,32 @@
     justify-content: center;
 }
 
+.list-group::-webkit-scrollbar {
+    width: 0.5em;
+    margin-top: 80px;
+}
+
+.list-group::-webkit-scrollbar-thumb {
+    background-color: white;
+    background-clip: content-box;
+    border-radius: 9999px;
+    border-top: 80px solid var(--primary);
+    border-bottom: 1em solid var(--primary);
+}
+
+.list-group::-webkit-scrollbar-thumb:hover {
+    background-color: lightgray;
+}
+
+/* Skill Cards */
 .skill-card {
-    border-radius: 1em !important;
     height: 120px !important;
     min-width: 120px !important;
-    padding: 20px;
     cursor: pointer;
-
-    img {
-        width: auto;
-        height: 100%;
-        transition: all 0.2s ease-in-out;
-    }
 }
 
-.skill-card:hover {
-    img {
-        transform: scale(1.1);
-    }
-}
-
-@media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 76.5em) {
     .profile-card {
         .profile-header {
             gap: 20px;
@@ -238,15 +269,6 @@
     .skill-card {
         height: 90px !important;
         min-width: 90px !important;
-        padding: 15px !important;
+        padding: 1em !important;
     }
-}
-
-.footer {
-    z-index: 99;
-    position: relative;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
