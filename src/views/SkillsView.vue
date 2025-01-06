@@ -46,7 +46,7 @@ const skills = [
     url: "https://nodejs.org/en",
   },
   {
-    name: "React",
+    name: "React / React Native",
     image: "react.png",
     url: "https://react.dev/",
   },
@@ -74,6 +74,31 @@ const skills = [
     name: "Django",
     image: "django.png",
     url: "https://www.djangoproject.com/",
+  },
+  {
+    name: "Figma",
+    image: "figma.png",
+    url: "https://www.figma.com/",
+  },
+  {
+    name: "Unity",
+    image: "unity.png",
+    url: "https://unity.com/",
+  },
+  {
+    name: "Construct 3",
+    image: "construct.png",
+    url: "https://www.construct.net/",
+  },
+  {
+    name: "Blender",
+    image: "blender.png",
+    url: "https://blender.org/",
+  },
+  {
+    name: "Godot Engine",
+    image: "godot.png",
+    url: "https://godotengine.org/",
   },
 ];
 </script>

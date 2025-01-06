@@ -18,15 +18,22 @@ const i18n = createI18n({
               date: "2021-2024",
             },
             {
-              title: "Voluntário",
+              title: "Voluntário (Conversação em Inglês)",
               comp: "BP Global STEM Academies",
               date: "06/2018",
+            },
+          ],
+          links: [
+            {
+              title:
+                "Inglês: leitura, escrita, fala e compreensão (EFSET - Nível C2)",
+              url: "https://cert.efset.org/pt/mxcEQj",
             },
           ],
         },
         resume: {
           title: "Baixar Currículo",
-          file: "Filipe_Ataide_PTBR.pdf",
+          file: "Filipe_Ataide_PT.pdf",
         },
       },
     },
@@ -44,15 +51,22 @@ const i18n = createI18n({
               date: "2021-2024",
             },
             {
-              title: "Volunteer",
+              title: "Volunteer (English Speaking)",
               comp: "BP Global STEM Academies",
               date: "06/2018",
+            },
+          ],
+          links: [
+            {
+              title:
+                "English: reading, writing, speaking and listening (EFSET - Level C2)",
+              url: "https://cert.efset.org/pt/mxcEQj",
             },
           ],
         },
         resume: {
           title: "Download Resume",
-          file: "Filipe_Ataide_ENUS.pdf",
+          file: "Filipe_Ataide_EN.pdf",
         },
       },
     },

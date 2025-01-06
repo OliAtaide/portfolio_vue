@@ -9,7 +9,7 @@ const { t, tm, rt } = useI18n();
   <div class="card profile-card">
     <div class="card-body">
       <div class="profile-header d-flex align-items-center">
-        <img :src="require('@/assets/me.jpg')" alt="" />
+        <img :src="require('@/assets/me.png')" alt="" />
         <div>
           <h3 class="card-title">Filipe Ataíde</h3>
           <h6 class="card-subtitle">{{ t("profile.subtitle") }}</h6>
@@ -34,6 +34,19 @@ const { t, tm, rt } = useI18n();
               <h6 class="card-subtitle">{{ rt(v.date) }}</h6>
             </div>
             <p class="card-text">{{ rt(v.comp) }}</p>
+          </div>
+        </div>
+        <div
+          class="card exp-card"
+          v-for="(v, i) in tm('profile.exp.links')"
+          :key="i"
+        >
+          <div class="card-body">
+            <div class="exp-header d-flex">
+              <a :href="v.url" target="_blank" class="card-title m-0">
+                {{ rt(v.title) }}
+              </a>
+            </div>
           </div>
         </div>
       </div>

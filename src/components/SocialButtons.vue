@@ -19,6 +19,7 @@ const copyToClipboard = async () => {
       href="https://www.linkedin.com/in/filipe-ataide/"
       class="btn btn-primary"
       title="LinkedIn"
+      target="_blank"
     >
       <i class="bi bi-linkedin"></i>
     </a>
@@ -34,6 +35,7 @@ const copyToClipboard = async () => {
       href="https://github.com/OliAtaide"
       class="btn btn-primary"
       title="Github"
+      target="_blank"
     >
       <i class="bi bi-github"></i>
     </a>
