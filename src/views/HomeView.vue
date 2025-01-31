@@ -33,21 +33,21 @@ const projects = [
 ];
 </script>
 <template>
-  <div class="list-group gap-3">
-    <a
-      target="_blank"
-      :href="v.url"
-      v-for="(v, i) in projects"
-      :key="i"
-      class="list-group-item p-0"
-      :title="v.name"
-      :alt="v.name"
-    >
-      <img
-        class="img-fluid"
-        :src="require(`@/assets/projects/${v.image}`)"
-        alt=""
-      />
-    </a>
+  <div class="row row-projects">
+    <div class="col-md-6" v-for="(v, i) in projects" :key="i">
+      <a
+        target="_blank"
+        class="btn img-container"
+        :href="v.url"
+        :title="v.name"
+        :alt="v.name"
+      >
+        <img
+          class="img-fluid"
+          :src="require(`@/assets/projects/${v.image}`)"
+          alt=""
+        />
+      </a>
+    </div>
   </div>
 </template>

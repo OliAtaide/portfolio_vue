@@ -22,7 +22,7 @@
     flex-direction: column;
     min-height: 100vh;
 
-    .footer{
+    .footer {
         margin-top: auto;
     }
 }
@@ -107,6 +107,9 @@
         width: 120px;
         height: 120px;
     }
+    .card-text {
+        text-align: justify !important;
+    }
 }
 
 .card-body,
@@ -119,13 +122,13 @@
 
 .profile-card,
 .skill-card,
-.list-group-item {
+.img-container {
     border-radius: 1em !important;
     border: none !important;
 }
 
 .skill-card,
-.list-group-item {
+.img-container {
     img {
         width: auto;
         height: 100%;
@@ -204,23 +207,21 @@
 
 /* List Group */
 
-.col {
-    position: relative;
-}
-.list-group {
-    overflow-y: scroll;
-    padding-right: 6px;
-    padding-bottom: 1em;
-    padding-top: 80px;
-    margin-top: -80px;
-    scroll-margin-top: 20px;
-    border-radius: 0 !important;
-}
+.main {
+    .row-projects {
+        row-gap: 1.5em;
 
-.list-group-item {
-    overflow: hidden;
-    border: none;
-    min-height: fit-content !important;
+        .img-container {
+            aspect-ratio: 16 / 9;
+            padding: 0;
+            border-radius: 1em;
+            overflow: hidden;
+
+            img {
+                width: 100% !important;
+            }
+        }
+    }
 }
 
 .skills {

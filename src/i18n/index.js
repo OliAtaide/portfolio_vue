@@ -8,7 +8,7 @@ const i18n = createI18n({
       profile: {
         subtitle: "Desenvolvedor Web",
         summary:
-          "Formado em Análise e Desenvolvimento de Sistemas e especializado em frameworks Node.js (React/Next, Vue, Angular).",
+          "Formado em Análise e Desenvolvimento de Sistemas com pós-graduação em Desenvolvimento Frontend.Especializado em frameworks Node.js (React/Next, Vue, Angular).",
         exp: {
           title: "Experiência",
           list: [
@@ -41,7 +41,7 @@ const i18n = createI18n({
       profile: {
         subtitle: "Web Developer",
         summary:
-          "Graduated in Systems Analysis and Development and specialized in Node.js related frameworks (React/Next, Vue, Angular).",
+          "Graduated in Systems Analysis and Development with postgrad in Frontend Development. Specialized in Node.js related frameworks (React/Next, Vue, Angular).",
         exp: {
           title: "Experience",
           list: [
