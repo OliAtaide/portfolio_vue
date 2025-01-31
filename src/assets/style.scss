@@ -18,6 +18,13 @@
     background-color: var(--primary);
     //font-family: "Inter", sans-serif;
     font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .footer{
+        margin-top: auto;
+    }
 }
 
 /* NavBar */

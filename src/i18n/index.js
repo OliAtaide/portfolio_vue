@@ -6,14 +6,14 @@ const i18n = createI18n({
   messages: {
     pt: {
       profile: {
-        subtitle: "Desenvolvedor Frontend",
+        subtitle: "Desenvolvedor Web",
         summary:
           "Formado em Análise e Desenvolvimento de Sistemas e especializado em frameworks Node.js (React/Next, Vue, Angular).",
         exp: {
           title: "Experiência",
           list: [
             {
-              title: "Desenvolvedor frontend",
+              title: "Desenvolvedor Web",
               comp: "Laboratório de Inovação Tecnológica em Saúde (LAIS/UFRN)",
               date: "2021-2024",
             },
@@ -39,14 +39,14 @@ const i18n = createI18n({
     },
     en: {
       profile: {
-        subtitle: "Frontend Developer",
+        subtitle: "Web Developer",
         summary:
           "Graduated in Systems Analysis and Development and specialized in Node.js related frameworks (React/Next, Vue, Angular).",
         exp: {
           title: "Experience",
           list: [
             {
-              title: "Frontend Developer",
+              title: "Web Developer",
               comp: "Laboratory of Technological Innovation in Health (LAIS/UFRN)",
               date: "2021-2024",
             },

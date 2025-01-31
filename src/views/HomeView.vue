@@ -2,22 +2,32 @@
 const projects = [
   {
     name: "AVASUS",
-    image: "avasus.png",
+    image: "avasus.jpg",
     url: "https://avasus.ufrn.br/",
   },
   {
+    name: "LAIS/HUOL/IFRN",
+    image: "lais.jpg",
+    url: "https://lais-4-0.vercel.app/blog",
+  },
+  {
+    name: "SEDIS/UFRN",
+    image: "sedis.jpg",
+    url: "https://sedis.ufrn.br/",
+  },
+  {
     name: "NAVI/IFRN",
-    image: "navi.png",
+    image: "navi.jpg",
     url: "https://www.navi.ifrn.edu.br/",
   },
   {
     name: "RECSiflis",
-    image: "recsifilis.png",
+    image: "recsifilis.jpg",
     url: "https://recsifilis.sifilisnao.com.br/",
   },
   {
     name: "Sífilis Não",
-    image: "sifilisnao.png",
+    image: "sifilisnao.jpg",
     url: "https://sifilisnao.com.br/",
   },
 ];
