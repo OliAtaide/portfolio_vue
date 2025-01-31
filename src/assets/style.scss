@@ -195,10 +195,13 @@
     }
 }
 
-.card-subtitle,
 .card-title {
-    font-size: 1em !important;
+    font-size: 1.5em !important;
     margin: 0;
+}
+
+.exp-card .card-title{
+    font-size: 1em !important;
 }
 
 .card-subtitle {
