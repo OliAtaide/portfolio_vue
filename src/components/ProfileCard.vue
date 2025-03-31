@@ -9,7 +9,7 @@ const { t, tm, rt } = useI18n();
   <div class="card profile-card">
     <div class="card-body">
       <div class="profile-header d-flex align-items-center">
-        <img :src="require('@/assets/me.png')" alt="" />
+        <img :src="require('@/assets/me.jpg')" alt="" />
         <div>
           <h3 class="card-title">Filipe Ataíde</h3>
           <h6 class="card-subtitle">{{ t("profile.subtitle") }}</h6>

@@ -56,9 +56,24 @@ const skills = [
     url: "https://nextjs.org/",
   },
   {
-    name: "Vue",
+    name: "Vue.js",
     image: "vue.png",
     url: "https://vuejs.org/",
+  },
+  {
+    name: "Nuxt",
+    image: "nuxt.png",
+    url: "https://nuxt.com/",
+  },
+  {
+    name: "Laravel",
+    image: "laravel.png",
+    url: "https://laravel.com/",
+  },
+  {
+    name: "Flutter",
+    image: "flutter.png",
+    url: "https://flutter.dev/",
   },
   {
     name: "Angular",
@@ -100,6 +115,11 @@ const skills = [
     image: "godot.png",
     url: "https://godotengine.org/",
   },
+  {
+    name: "Unreal Engine",
+    image: "unreal.png",
+    url: "https://www.unrealengine.com/",
+  },
 ];
 </script>
 
@@ -118,6 +138,9 @@ const skills = [
         :alt="s.name"
         class="img-fluid"
       />
+      <h6>
+        {{ s.name }}
+      </h6>
     </a>
   </div>
 </template>

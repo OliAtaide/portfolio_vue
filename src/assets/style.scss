@@ -200,7 +200,7 @@
     margin: 0;
 }
 
-.exp-card .card-title{
+.exp-card .card-title {
     font-size: 1em !important;
 }
 
@@ -253,9 +253,19 @@
 
 /* Skill Cards */
 .skill-card {
-    height: 120px !important;
     min-width: 120px !important;
     cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+        height: 80px !important;
+    }
+
+    h6 {
+        margin: 0;
+        font-weight: 600;
+    }
 }
 
 /* Media Queries */
@@ -283,8 +293,12 @@
     }
 
     .skill-card {
-        height: 90px !important;
         min-width: 90px !important;
         padding: 1em !important;
+
+        img {
+            height: 60px !important;
+        }
     }
 }
+ 
