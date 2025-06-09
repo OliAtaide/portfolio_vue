@@ -15,7 +15,7 @@ const i18n = createI18n({
             {
               title: "Desenvolvedor Web",
               comp: "Laboratório de Inovação Tecnológica em Saúde (LAIS/UFRN)",
-              date: "2021-2024",
+              date: "2021-2025",
             },
             {
               title: "Desenvolvedor Wordpress",
@@ -23,8 +23,8 @@ const i18n = createI18n({
               date: "03/2025",
             },
             {
-              title: "Desenvolvedor Nuxt",
-              comp: "Freelancer",
+              title: "Desenvolvedor Nuxt/Next",
+              comp: "IT Development",
               date: "2025",
             },
             {
@@ -58,7 +58,7 @@ const i18n = createI18n({
             {
               title: "Web Developer",
               comp: "Laboratory of Technological Innovation in Health (LAIS/UFRN)",
-              date: "2021-2024",
+              date: "2021-2025",
             },
             {
               title: "Wordpress Developer",
@@ -66,8 +66,8 @@ const i18n = createI18n({
               date: "03/2025",
             },
             {
-              title: "Nuxt Developer",
-              comp: "Freelancer",
+              title: "Nuxt/Next Developer",
+              comp: "IT Development",
               date: "2025",
             },
             {

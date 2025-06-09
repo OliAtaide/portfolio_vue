@@ -6,6 +6,11 @@ const projects = [
     url: "https://avasus.ufrn.br/",
   },
   {
+    name: "ScriptiveAI",
+    image: "scriptiveapp.jpg",
+    url: "https://www.scriptiveapp.com/",
+  },
+  {
     name: "LAIS/HUOL/IFRN",
     image: "lais.jpg",
     url: "https://lais-4-0.vercel.app/blog",
@@ -21,14 +26,14 @@ const projects = [
     url: "https://www.navi.ifrn.edu.br/",
   },
   {
-    name: "RECSiflis",
-    image: "recsifilis.jpg",
-    url: "https://recsifilis.sifilisnao.com.br/",
+    name: "Olá SecretarIA",
+    image: "olasecretaria.jpg",
+    url: "https://olasecretaria.com/",
   },
   {
-    name: "Sífilis Não",
-    image: "sifilisnao.jpg",
-    url: "https://sifilisnao.com.br/",
+    name: "SwipeWell",
+    image: "swipewell.jpg",
+    url: "https://www.swipewell.app/",
   },
 ];
 </script>
