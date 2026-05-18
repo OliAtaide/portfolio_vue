@@ -1,6 +1,11 @@
 <script setup>
 const skills = [
   {
+    name: "Shopify",
+    image: "shopify.png",
+    url: "https://shopify.dev/",
+  },
+  {
     name: "JavaScript",
     image: "js.png",
     url: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",

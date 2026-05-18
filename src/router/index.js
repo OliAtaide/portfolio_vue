@@ -5,9 +5,14 @@ import SkillsView from "@/views/SkillsView.vue";
 
 const routes = [
   {
+    path: '/',
+    redirect: '/pt'
+  },
+  {
     path: "/:locale?",
     name: "home",
     component: HomeView,
+    props: true,
   },
   {
     path: "/:locale?/skills",
