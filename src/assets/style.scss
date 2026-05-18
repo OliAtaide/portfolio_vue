@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --primary: #004471;
   --primary-light: #CFEDFB;
@@ -17,8 +15,7 @@
 
 #app {
   background-color: var(--primary);
-  //font-family: "Inter", sans-serif;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,6 +48,10 @@
   justify-content: center;
   border: none !important;
   outline: none !important;
+}
+
+.dropdown-toggle::after{
+  border-top: .3em solid white !important; 
 }
 
 .dropdown-menu {
@@ -113,6 +114,21 @@
   .card-text {
     text-align: justify !important;
   }
+
+  .btn {
+    border-radius: 99px !important;
+  }
+}
+
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .card-body,
@@ -126,7 +142,7 @@
 .profile-card,
 .skill-card,
 .img-container {
-  border-radius: 1em !important;
+  border-radius: 0.5em !important;
   border: none !important;
 }
 
@@ -144,11 +160,11 @@
 }
 
 .profile-header {
-  gap: 30px;
+  gap: 20px;
 
   .card-title {
     font-size: 1.5em !important;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 }
 
@@ -183,8 +199,7 @@
 }
 
 .exp-card {
-  border-color: rgb(128, 128, 128)  !important;
-  background-color: rgb(240, 240, 240) !important;
+  border-color: rgb(224, 224, 224) !important;
   border-width: 2px !important;
 
   .exp-header {
@@ -216,6 +231,7 @@
 
 .main {
   margin-bottom: 1.5em;
+
   .row-projects {
     row-gap: 1.5em;
 

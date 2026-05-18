@@ -41,15 +41,3 @@ const copyToClipboard = async () => {
     </a>
   </div>
 </template>
-
-<style lang="scss">
-.card-buttons {
-  display: flex;
-  gap: 20px;
-
-  .btn {
-    width: 40px;
-    height: 40px;
-  }
-}
-</style>
