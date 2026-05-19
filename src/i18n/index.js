@@ -5,6 +5,10 @@ const i18n = createI18n({
   fallbackLocale: "en",
   messages: {
     pt: {
+      tabs:{
+        profile: "Perfil",
+        skills: "Habilidades",
+      },
       profile: {
         subtitle: "Desenvolvedor Web",
         summary:
@@ -32,18 +36,6 @@ const i18n = createI18n({
               comp: "IT Development",
               date: "2025",
             },
-            // {
-            //   title: "Voluntário (Conversação em Inglês)",
-            //   comp: "BP Global STEM Academies",
-            //   date: "2018",
-            // },
-          ],
-          links: [
-            // {
-            //   title:
-            //     "Inglês: leitura, escrita, fala e compreensão (EFSET - Nível C2)",
-            //   url: "https://cert.efset.org/pt/mxcEQj",
-            // },
           ],
         },
         resume: {
@@ -53,6 +45,10 @@ const i18n = createI18n({
       },
     },
     en: {
+      tabs:{
+        profile: "Profile",
+        skills: "Skills",
+      },
       profile: {
         subtitle: "Web Developer",
         summary:
@@ -80,18 +76,6 @@ const i18n = createI18n({
               comp: "IT Development",
               date: "2025",
             },
-            // {
-            //   title: "Volunteer (English Speaking)",
-            //   comp: "BP Global STEM Academies",
-            //   date: "2018",
-            // },
-          ],
-          links: [
-            // {
-            //   title:
-            //     "English: reading, writing, speaking and listening (EFSET - Level C2)",
-            //   url: "https://cert.efset.org/pt/mxcEQj",
-            // },
           ],
         },
         resume: {

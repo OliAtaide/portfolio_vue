@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
   --primary: #004471;
   --primary-light: #CFEDFB;
@@ -50,8 +52,8 @@
   outline: none !important;
 }
 
-.dropdown-toggle::after{
-  border-top: .3em solid white !important; 
+.dropdown-toggle::after {
+  border-top: .3em solid white !important;
 }
 
 .dropdown-menu {
@@ -253,6 +255,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: "Inter", sans-serif;
 }
 
 .list-group::-webkit-scrollbar {
@@ -321,5 +324,46 @@
     img {
       height: 60px !important;
     }
+  }
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-details {
+  position: absolute;
+  text-align: start;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h6 {
+    margin: 0;
+    font-size: 1.25em;
+    font-family: "Inter", sans-serif;
+    line-height: 1;
+  }
+}
+
+.project-skills {
+  display: flex;
+  gap: 5px;
+
+  .skill-icon {
+    max-width: 24px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
   }
 }

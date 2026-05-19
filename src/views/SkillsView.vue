@@ -128,7 +128,7 @@ const skills = [
 ];
 
 const modules = import.meta.glob('@/assets/skills/*.{jpg,png}', { eager: true })
-const getProjectImage = (filename) => modules[`/src/assets/skills/${filename}`]?.default
+const getSkillImage = (filename) => modules[`/src/assets/skills/${filename}`]?.default
 </script>
 
 <template>
@@ -142,7 +142,7 @@ const getProjectImage = (filename) => modules[`/src/assets/skills/${filename}`]?
       target="_blank"
     >
       <img
-        :src="getProjectImage(s.image)"
+        :src="getSkillImage(s.image)"
         :alt="s.name"
         class="img-fluid"
       />

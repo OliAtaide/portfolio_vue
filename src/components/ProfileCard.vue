@@ -1,7 +1,7 @@
 <script setup>
 import SocialButtons from "@/components/SocialButtons.vue";
 import { useI18n } from "vue-i18n";
-import profileImg from "@/assets/me.jpg";
+import profileImg from "@/assets/me.png";
 
 const { t, tm, rt } = useI18n();
 </script>

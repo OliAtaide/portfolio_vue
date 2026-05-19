@@ -56,7 +56,7 @@ const currentLocale = computed(() => route.params.locale || locale.value);
                 :to="{ name: 'home', params: { locale: currentLocale } }"
                 class="nav-link"
                 active-class="active"
-                title="Projetos"
+                :title="$t('tabs.profile')"
               >
                 <i class="bi bi-kanban"></i>
               </router-link>
@@ -69,7 +69,7 @@ const currentLocale = computed(() => route.params.locale || locale.value);
                 :to="{ name: 'skills', params: { locale: currentLocale } }"
                 class="nav-link"
                 active-class="active"
-                title="Tecnologias"
+                :title="$t('tabs.skills')"
               >
                 <i class="bi bi-tools"></i>
               </router-link>
