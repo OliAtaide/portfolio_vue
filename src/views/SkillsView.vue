@@ -126,6 +126,9 @@ const skills = [
     url: "https://www.unrealengine.com/",
   },
 ];
+
+const modules = import.meta.glob('@/assets/skills/*.{jpg,png}', { eager: true })
+const getProjectImage = (filename) => modules[`/src/assets/skills/${filename}`]?.default
 </script>
 
 <template>
@@ -139,7 +142,7 @@ const skills = [
       target="_blank"
     >
       <img
-        :src="require(`@/assets/skills/${s.image}`)"
+        :src="getProjectImage(s.image)"
         :alt="s.name"
         class="img-fluid"
       />

@@ -36,6 +36,9 @@ const projects = [
     url: "https://www.swipewell.app/",
   },
 ];
+
+const modules = import.meta.glob('@/assets/projects/*.{jpg,png}', { eager: true })
+const getProjectImage = (filename) => modules[`/src/assets/projects/${filename}`]?.default
 </script>
 <template>
   <div class="row row-projects">
@@ -49,7 +52,7 @@ const projects = [
       >
         <img
           class="img-fluid"
-          :src="require(`@/assets/projects/${v.image}`)"
+          :src="getProjectImage(v.image)"
           alt=""
         />
       </a>

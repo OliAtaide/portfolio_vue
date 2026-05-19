@@ -1,6 +1,7 @@
 <script setup>
 import SocialButtons from "@/components/SocialButtons.vue";
 import { useI18n } from "vue-i18n";
+import profileImg from "@/assets/me.jpg";
 
 const { t, tm, rt } = useI18n();
 </script>
@@ -9,7 +10,7 @@ const { t, tm, rt } = useI18n();
   <div class="card profile-card">
     <div class="card-body">
       <div class="profile-header d-flex align-items-center">
-        <img :src="require('@/assets/me.jpg')" alt="" />
+        <img :src="profileImg" alt="" />
         <div>
           <h3 class="card-title">Filipe Ataíde</h3>
           <h6 class="card-subtitle">{{ t("profile.subtitle") }}</h6>
