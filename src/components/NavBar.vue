@@ -1,7 +1,4 @@
 <script setup>
-import BrazilIcon from "@/icons/BrazilIcon.vue";
-import UsaIcon from "@/icons/UsaIcon.vue";
-
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";

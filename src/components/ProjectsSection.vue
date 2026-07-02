@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { h } from 'vue';
 
 const projects = [
   {
@@ -67,7 +66,7 @@ const getSkillImage = (filename) => skill_modules[`/src/assets/skills/${filename
       {{ $t('tabs.projects') }}
     </h2>
     <swiper :modules="[Navigation, Pagination, Autoplay]" :slides-per-view="3" :space-between="20" :navigation="true"
-      :loop="true" :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange">
+      :loop="true" :pagination="{ clickable: true }">
       <swiper-slide v-for="(v, i) in projects" :key="i">
         <a target="_blank" class="btn img-container project-card" :href="v.url" :title="v.name">
           <img class="img-fluid" :src="getProjectImage(v.image)" :alt="v.name" />
