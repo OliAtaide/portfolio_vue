@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import i18n from "@/i18n";
-import SkillsView from "@/views/SkillsView.vue";
 
 const routes = [
   {
@@ -14,16 +13,23 @@ const routes = [
     component: HomeView,
     props: true,
   },
-  {
-    path: "/:locale?/skills",
-    name: "skills",
-    component: SkillsView,
-  },
 ];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0 }
+  }
 });
 
 router.beforeEach((to, from, next) => {

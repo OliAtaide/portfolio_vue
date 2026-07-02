@@ -6,8 +6,9 @@ const i18n = createI18n({
   messages: {
     pt: {
       tabs:{
-        profile: "Perfil",
+        projects: "Projetos",
         skills: "Habilidades",
+        history: "Experiência",
       },
       profile: {
         subtitle: "Desenvolvedor Web",
@@ -46,8 +47,9 @@ const i18n = createI18n({
     },
     en: {
       tabs:{
-        profile: "Profile",
+        projects: "Projects",
         skills: "Skills",
+        history: "Experience",
       },
       profile: {
         subtitle: "Web Developer",
