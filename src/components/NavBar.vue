@@ -38,7 +38,8 @@ const isActive = (hash) => activeHash.value === hash;
         <li class="nav-item">
           <router-link :to="{ name: 'home', hash: '#projects', params: { locale: currentLocale } }" class="nav-link"
             :class="{ active: isActive('#projects') }" :title="$t('tabs.projects')">
-            {{ $t('tabs.projects') }}
+            <span class="nav-link-text">{{ $t('tabs.projects') }}</span>
+            <i class="bi bi-folder-fill"></i> 
           </router-link>
         </li>
         <li class="nav-item">
@@ -47,7 +48,8 @@ const isActive = (hash) => activeHash.value === hash;
         <li class="nav-item">
           <router-link :to="{ name: 'home', hash: '#skills', params: { locale: currentLocale } }" class="nav-link"
             :class="{ active: isActive('#skills') }" :title="$t('tabs.skills')">
-            {{ $t('tabs.skills') }}
+            <span class="nav-link-text">{{ $t('tabs.skills') }}</span>
+            <i class="bi bi-tools"></i> 
           </router-link>
         </li>
         <li class="nav-item">
@@ -56,7 +58,8 @@ const isActive = (hash) => activeHash.value === hash;
         <li class="nav-item">
           <router-link :to="{ name: 'home', hash: '#history', params: { locale: currentLocale } }" class="nav-link"
             :class="{ active: isActive('#history') }" :title="$t('tabs.history')">
-            {{ $t('tabs.history') }}
+            <span class="nav-link-text">{{ $t('tabs.history') }}</span>
+            <i class="bi bi-briefcase-fill"></i>
           </router-link>
         </li>
         <language-button/>

@@ -61,12 +61,24 @@ const getSkillImage = (filename) => skill_modules[`/src/assets/skills/${filename
 </script>
 
 <template>
-  <div class="section"  id="projects">
+  <div class="section" id="projects">
     <h2 class="section-title">
       {{ $t('tabs.projects') }}
     </h2>
-    <swiper :modules="[Navigation, Pagination, Autoplay]" :slides-per-view="3" :space-between="20" :navigation="true"
-      :loop="true" :pagination="{ clickable: true }">
+    <swiper :modules="[Navigation, Pagination, Autoplay]" :breakpoints="{
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    }" :space-between="20" :navigation="true" :loop="true" :pagination="{ clickable: true }">
       <swiper-slide v-for="(v, i) in projects" :key="i">
         <a target="_blank" class="btn img-container project-card" :href="v.url" :title="v.name">
           <img class="img-fluid" :src="getProjectImage(v.image)" :alt="v.name" />

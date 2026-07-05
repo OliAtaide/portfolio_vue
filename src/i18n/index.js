@@ -40,7 +40,7 @@ const i18n = createI18n({
           ],
         },
         resume: {
-          title: "Baixar Currículo",
+          title: "Currículo",
           file: "Filipe_Ataide_PT.pdf",
         },
       },
@@ -81,7 +81,7 @@ const i18n = createI18n({
           ],
         },
         resume: {
-          title: "Download Resume",
+          title: "Resume",
           file: "Filipe_Ataide_EN.pdf",
         },
       },

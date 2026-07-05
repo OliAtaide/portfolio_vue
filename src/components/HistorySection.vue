@@ -10,8 +10,8 @@ const { t, tm, rt } = useI18n();
       {{ t("profile.exp.title") }}
     </h2>
     <div class="exp-list">
-      <div class="row">
-        <div class="col" v-for="(v, i) in tm('profile.exp.list')" :key="i">
+      <div class="row row-gap-3">
+        <div class="col-12 col-md-6 col-lg-3" v-for="(v, i) in tm('profile.exp.list')" :key="i">
           <div class="card exp-card">
             <div class="card-body">
               <div class="exp-header d-flex">

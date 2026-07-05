@@ -195,6 +195,11 @@ html {
   img {
     width: auto;
     height: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
   }
 }
 
@@ -323,40 +328,7 @@ html {
   }
 }
 
-/* Media Queries */
-@media (max-width: 76.5em) {
-  #profile {
-    .profile-header {
-      gap: 20px;
-    }
 
-    img {
-      width: 80px !important;
-      height: 80px !important;
-    }
-  }
-
-  .main {
-    margin-bottom: 1em;
-  }
-
-  .list-group {
-    overflow: unset;
-    margin-top: 0;
-    padding: 0 !important;
-    height: unset;
-    position: static;
-  }
-
-  .skill-card {
-    min-width: 90px !important;
-    padding: 1em !important;
-
-    img {
-      height: 60px !important;
-    }
-  }
-}
 
 .project-card {
   position: relative;
@@ -380,8 +352,9 @@ html {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(128, 128, 128, 0.75);
-  color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 68, 113, 0.5);
+  
+  color: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -453,7 +426,7 @@ html {
 .swiper-button-prev::after {
   font-size: 40px;
   font-family: 'bootstrap-icons';
-  color: rgba(128, 128, 128, 0.75);
+  color: rgba(0, 68, 113, 0.5);
 }
 
 .swiper-button-prev .swiper-navigation-icon,
@@ -531,4 +504,63 @@ html {
 
 .lang-switch-input:checked ~ .lang-switch-track .lang-en {
   color: var(--primary);
+}
+@media (max-width: 767.98px) {
+  .nav{
+    gap: 0.5em;
+    font-size: 12px;
+  }
+
+  .nav-link-text {
+    display: none;
+  }
+
+  #profile {
+    padding-inline: 2.5em !important;
+    background-size: cover;
+    background-position: center;
+
+    .section-title {
+      font-size: 2.0em;
+    }
+
+    .section-subtitle {
+      font-size: 1.5em;
+    }
+
+    .section-text {
+      font-size: 1.0em;
+    }
+
+    .profile-header {
+      gap: 20px;
+    }
+  }
+
+  .main {
+    margin-bottom: 1em;
+  }
+
+  .list-group {
+    overflow: unset;
+    margin-top: 0;
+    padding: 0 !important;
+    height: unset;
+    position: static;
+  }
+
+  .skill-card {
+    min-width: 90px !important;
+    padding: 1em !important;
+
+    img {
+      height: 60px !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-item:not(:first-child)  .bi {
+    display: none;
+  }
 }
