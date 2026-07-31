@@ -17,13 +17,13 @@ const copyToClipboard = async () => {
 
 <template>
   <div class="social-buttons">
-    <a href="https://www.linkedin.com/in/filipe-ataide/" class="btn btn-primary" title="LinkedIn" target="_blank">
+    <a href="https://www.linkedin.com/in/filipe-ataide/" class="btn btn-primary" title="LinkedIn" target="_blank" rel="noopener noreferrer">
       <i class="bi bi-linkedin"></i>
     </a>
     <button type="button" @click="copyToClipboard" class="btn btn-primary" title="E-mail">
       <i class="bi bi-envelope-at-fill"></i>
     </button>
-    <a href="https://github.com/OliAtaide" class="btn btn-primary" title="Github" target="_blank">
+    <a href="https://github.com/OliAtaide" class="btn btn-primary" title="Github" target="_blank" rel="noopener noreferrer">
       <i class="bi bi-github"></i>
     </a>
 

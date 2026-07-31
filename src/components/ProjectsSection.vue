@@ -80,7 +80,7 @@ const getSkillImage = (filename) => skill_modules[`/src/assets/skills/${filename
       },
     }" :space-between="20" :navigation="true" :loop="true" :pagination="{ clickable: true }">
       <swiper-slide v-for="(v, i) in projects" :key="i">
-        <a target="_blank" class="btn img-container project-card" :href="v.url" :title="v.name">
+        <a target="_blank" rel="noopener noreferrer" class="btn img-container project-card" :href="v.url" :title="v.name">
           <img class="img-fluid" :src="getProjectImage(v.image)" :alt="v.name" />
           <div class="project-details">
             <h6>

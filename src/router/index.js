@@ -40,6 +40,8 @@ router.beforeEach((to, from, next) => {
     i18n.global.locale = locale;
   }
 
+  document.documentElement.lang = locale;
+
   next();
 });
 

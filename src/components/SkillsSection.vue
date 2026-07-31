@@ -137,7 +137,7 @@ const getSkillImage = (filename) => modules[`/src/assets/skills/${filename}`]?.d
       {{ $t('tabs.skills') }}
     </h2>
     <div class="skills d-flex">
-      <a v-for="(s, i) in skills" :key="i" class="card skill-card" :title="s.name" :href="s.url" target="_blank">
+      <a v-for="(s, i) in skills" :key="i" class="card skill-card" :title="s.name" :href="s.url" target="_blank" rel="noopener noreferrer">
         <img :src="getSkillImage(s.image)" :alt="s.name" class="img-fluid" />
       </a>
     </div>
