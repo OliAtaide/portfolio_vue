@@ -22,17 +22,20 @@ const { t, tm, rt } = useI18n();
       </div>
       <div class="col-12 col-lg-6">
         <h3 class="group-title">{{ t("education.languagesTitle") }}</h3>
-        <article class="info-card">
-          <ul class="language-list">
-            <li v-for="(language, i) in tm('education.languages')" :key="i">
-              <strong>{{ rt(language.name) }}:</strong>{{ " " }}
-              <a v-if="language.url" :href="rt(language.url)" target="_blank" rel="noopener noreferrer">
+        <div class="d-flex flex-column gap-3">
+          <article class="info-card" v-for="(language, i) in tm('education.languages')" :key="i">
+            <div class="info-header">
+              <h4 class="info-title">{{ rt(language.name) }}</h4>
+            </div>
+            <p class="info-subtitle mb-0">
+              <a v-if="language.url" class="info-link" :href="rt(language.url)" target="_blank"
+                rel="noopener noreferrer">
                 {{ rt(language.level) }} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
               </a>
-              <span v-else>{{ rt(language.level) }}</span>
-            </li>
-          </ul>
-        </article>
+              <template v-else>{{ rt(language.level) }}</template>
+            </p>
+          </article>
+        </div>
       </div>
     </div>
   </section>

@@ -497,7 +497,7 @@ main {
 .info-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 1em;
 }
 
@@ -509,6 +509,7 @@ main {
 
 .info-date {
   font-size: 0.875rem;
+  line-height: 1.2; // match the heading's line height so cards with and without a date are equally tall
   color: var(--primary-light);
   white-space: nowrap;
 }
@@ -530,18 +531,12 @@ main {
   }
 }
 
-.language-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+.info-link {
+  color: var(--primary-light);
+  text-underline-offset: 3px;
 
-  a {
-    color: var(--primary-light);
-
-    &:hover {
-      color: white;
-    }
+  &:hover {
+    color: white;
   }
 
   .bi {
