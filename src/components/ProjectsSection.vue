@@ -46,7 +46,7 @@ const projects = [
     name: "SwipeWell",
     image: "swipewell.jpg",
     url: "https://www.swipewell.app/",
-    tools: ["js.png", "ts.png", "node.png", "react.png", "next.png", "sass.png"],
+    tools: ["js.png", "ts.png", "nodejs.png", "react.png", "nextjs.png", "sass.png"],
   },
 ];
 

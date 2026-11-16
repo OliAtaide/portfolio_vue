@@ -3,14 +3,19 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
-const email = ref("flpdoa@gmail.com");
+const email = "flpdoa@gmail.com";
+const copied = ref(false);
+let copiedTimer;
 
 const copyToClipboard = async () => {
   try {
-    await navigator.clipboard.writeText(email.value);
-    alert(`Email  ${email.value} copied to clipboard!`);
-  } catch (err) {
-    console.error("Failed to copy: ", err);
+    await navigator.clipboard.writeText(email);
+    copied.value = true;
+    clearTimeout(copiedTimer);
+    copiedTimer = setTimeout(() => (copied.value = false), 2000);
+  } catch {
+    // Clipboard unavailable (insecure context, permission denied): open the mail client instead
+    window.location.href = `mailto:${email}`;
   }
 };
 </script>
@@ -20,9 +25,15 @@ const copyToClipboard = async () => {
     <a href="https://www.linkedin.com/in/filipe-ataide/" class="btn btn-primary" title="LinkedIn" target="_blank" rel="noopener noreferrer">
       <i class="bi bi-linkedin"></i>
     </a>
-    <button type="button" @click="copyToClipboard" class="btn btn-primary" title="E-mail">
-      <i class="bi bi-envelope-at-fill"></i>
-    </button>
+    <div class="email-copy">
+      <button type="button" @click="copyToClipboard" class="btn btn-primary" :title="t('profile.email.copy')"
+        :aria-label="t('profile.email.copy')">
+        <i class="bi" :class="copied ? 'bi-check-lg' : 'bi-envelope-at-fill'"></i>
+      </button>
+      <span class="email-copied" :class="{ visible: copied }" role="status" aria-live="polite">
+        {{ copied ? t('profile.email.copied') : '' }}
+      </span>
+    </div>
     <a href="https://github.com/OliAtaide" class="btn btn-primary" title="Github" target="_blank" rel="noopener noreferrer">
       <i class="bi bi-github"></i>
     </a>

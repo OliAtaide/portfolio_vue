@@ -39,9 +39,13 @@ const i18n = createI18n({
             },
           ],
         },
+        email: {
+          copy: "Copiar e-mail",
+          copied: "E-mail copiado!",
+        },
         resume: {
           title: "Currículo",
-          file: "Filipe_Ataide_PT.pdf",
+          file: "Filipe_Ataide_Curriculo.pdf",
         },
       },
     },
@@ -80,9 +84,13 @@ const i18n = createI18n({
             },
           ],
         },
+        email: {
+          copy: "Copy e-mail",
+          copied: "E-mail copied!",
+        },
         resume: {
           title: "Resume",
-          file: "Filipe_Ataide_EN.pdf",
+          file: "Filipe_Ataide_Resume.pdf",
         },
       },
     },

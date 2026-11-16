@@ -28,7 +28,7 @@ const isActive = (hash) => activeHash.value === hash;
       <ul class="nav" id="myTab">
         <li class="nav-item">
           <router-link :to="{ name: 'home', params: { locale: currentLocale } }" class="nav-link"
-            :title="$t('tabs.projects')">
+            title="Home">
             <i class="bi bi-house-fill"></i>
           </router-link>
         </li>

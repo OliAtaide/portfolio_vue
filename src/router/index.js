@@ -8,10 +8,14 @@ const routes = [
     redirect: '/pt'
   },
   {
-    path: "/:locale?",
+    path: "/:locale(pt|en)",
     name: "home",
     component: HomeView,
     props: true,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/pt",
   },
 ];
 
