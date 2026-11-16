@@ -22,24 +22,26 @@ const copyToClipboard = async () => {
 
 <template>
   <div class="social-buttons">
-    <a href="https://www.linkedin.com/in/filipe-ataide/" class="btn btn-primary" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <i class="bi bi-linkedin"></i>
+    <a href="https://www.linkedin.com/in/filipe-ataide/" class="social-btn" title="LinkedIn" aria-label="LinkedIn"
+      target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-linkedin" aria-hidden="true"></i>
     </a>
     <div class="email-copy">
-      <button type="button" @click="copyToClipboard" class="btn btn-primary" :title="t('profile.email.copy')"
+      <button type="button" @click="copyToClipboard" class="social-btn" :title="t('profile.email.copy')"
         :aria-label="t('profile.email.copy')">
-        <i class="bi" :class="copied ? 'bi-check-lg' : 'bi-envelope-at-fill'"></i>
+        <i class="bi" :class="copied ? 'bi-check-lg' : 'bi-envelope-at-fill'" aria-hidden="true"></i>
       </button>
       <span class="email-copied" :class="{ visible: copied }" role="status" aria-live="polite">
-        {{ copied ? t('profile.email.copied') : '' }}
+        {{ copied ? t("profile.email.copied") : "" }}
       </span>
     </div>
-    <a href="https://github.com/OliAtaide" class="btn btn-primary" title="Github" target="_blank" rel="noopener noreferrer">
-      <i class="bi bi-github"></i>
+    <a href="https://github.com/OliAtaide" class="social-btn" title="GitHub" aria-label="GitHub" target="_blank"
+      rel="noopener noreferrer">
+      <i class="bi bi-github" aria-hidden="true"></i>
     </a>
-
-    <a class="btn btn-primary" :href="'/' + t('profile.resume.file')">
-      <i class="bi bi-download"></i>
+    <a class="social-btn social-btn-resume" :href="'/' + t('profile.resume.file')" target="_blank"
+      rel="noopener noreferrer">
+      <i class="bi bi-download" aria-hidden="true"></i>
       {{ t("profile.resume.title") }}
     </a>
   </div>

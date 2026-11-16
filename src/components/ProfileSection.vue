@@ -6,12 +6,11 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div class="section" id="profile">
+  <section class="section" id="profile">
     <h1 class="section-title">Filipe Ataíde</h1>
-    <h3 class="section-subtitle">{{ t("profile.subtitle") }}</h3>
-    <div class="section-text">
-      {{ t("profile.summary") }}
-    </div>
+    <p class="section-subtitle">{{ t("profile.subtitle") }}</p>
+    <p class="section-tagline">Shopify · React · Node.js</p>
+    <p class="section-text">{{ t("profile.summary") }}</p>
     <SocialButtons />
-  </div>
+  </section>
 </template>

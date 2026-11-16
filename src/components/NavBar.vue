@@ -5,65 +5,42 @@ import { useI18n } from "vue-i18n";
 import LanguageButton from "./LanguageButton.vue";
 
 const route = useRoute();
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const currentLocale = computed(() => route.params.locale || locale.value);
 
-// list of hashes in nav order, '' represents "no hash" (the default/first link)
-const navHashes = ['', '#projects', '#skills', '#history'];
-
-const activeHash = computed(() => {
-  // if the current route hash matches one we know about, use it
-  if (navHashes.includes(route.hash)) return route.hash;
-  // otherwise fall back to the first entry
-  return navHashes[0];
-});
-
-const isActive = (hash) => activeHash.value === hash;
+const links = [
+  { hash: "#projects", label: "tabs.projects", icon: "bi-folder-fill" },
+  { hash: "#skills", label: "tabs.skills", icon: "bi-tools" },
+  { hash: "#history", label: "tabs.history", icon: "bi-briefcase-fill" },
+  { hash: "#education", label: "tabs.education", icon: "bi-mortarboard-fill" },
+];
 </script>
 
 <template>
-  <div class="navbar fixed-top">
+  <nav class="navbar fixed-top">
     <div class="container">
-      <ul class="nav" id="myTab">
+      <ul class="nav">
         <li class="nav-item">
           <router-link :to="{ name: 'home', params: { locale: currentLocale } }" class="nav-link"
-            title="Home">
-            <i class="bi bi-house-fill"></i>
+            :title="t('nav.home')" :aria-label="t('nav.home')">
+            <i class="bi bi-house-fill" aria-hidden="true"></i>
           </router-link>
         </li>
-        <li class="nav-item">
-          <div class="dot"></div>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'home', hash: '#projects', params: { locale: currentLocale } }" class="nav-link"
-            :class="{ active: isActive('#projects') }" :title="$t('tabs.projects')">
-            <span class="nav-link-text">{{ $t('tabs.projects') }}</span>
-            <i class="bi bi-folder-fill"></i> 
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <div class="dot"></div>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'home', hash: '#skills', params: { locale: currentLocale } }" class="nav-link"
-            :class="{ active: isActive('#skills') }" :title="$t('tabs.skills')">
-            <span class="nav-link-text">{{ $t('tabs.skills') }}</span>
-            <i class="bi bi-tools"></i> 
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <div class="dot"></div>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'home', hash: '#history', params: { locale: currentLocale } }" class="nav-link"
-            :class="{ active: isActive('#history') }" :title="$t('tabs.history')">
-            <span class="nav-link-text">{{ $t('tabs.history') }}</span>
-            <i class="bi bi-briefcase-fill"></i>
-          </router-link>
-        </li>
-        <language-button/>
+        <template v-for="link in links" :key="link.hash">
+          <li class="nav-item" aria-hidden="true">
+            <div class="dot"></div>
+          </li>
+          <li class="nav-item">
+            <router-link :to="{ name: 'home', hash: link.hash, params: { locale: currentLocale } }" class="nav-link"
+              :class="{ active: route.hash === link.hash }" :title="t(link.label)" :aria-label="t(link.label)">
+              <span class="nav-link-text">{{ t(link.label) }}</span>
+              <i class="bi" :class="link.icon" aria-hidden="true"></i>
+            </router-link>
+          </li>
+        </template>
       </ul>
+      <LanguageButton />
     </div>
-  </div>
+  </nav>
 </template>

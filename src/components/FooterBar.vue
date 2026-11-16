@@ -1,7 +1,7 @@
 <template>
-  <div class="footer">
-    <h6 class="m-0">
-      © {{ new Date().getFullYear() }} — <strong>Vue.js</strong>
-    </h6>
-  </div>
+  <footer class="footer">
+    <p class="m-0">
+      © {{ new Date().getFullYear() }} Filipe Ataíde · {{ $t("footer.builtWith") }}
+    </p>
+  </footer>
 </template>

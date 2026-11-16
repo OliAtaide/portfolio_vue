@@ -40,8 +40,8 @@ router.beforeEach((to, from, next) => {
   const locale = to.params.locale || "pt";
 
   // Set i18n locale
-  if (i18n.global.locale !== locale) {
-    i18n.global.locale = locale;
+  if (i18n.global.locale.value !== locale) {
+    i18n.global.locale.value = locale;
   }
 
   document.documentElement.lang = locale;
